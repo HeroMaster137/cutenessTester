@@ -2,14 +2,15 @@ let progress = 0;
 let loadingBar = document.getElementById('loading-bar');
 let lineProg = 0;
 let chosenLine;
+let inputText = "";
 let lines = [
     ["Loading...", "Scanning account", "Scanning media", "Using AI algorithm", "Waiting for response", "HIGH CUTENESS LEVELS DETECTED"],
     ["Loading...", "Processing", "Checking database", "Consulting doctor", "Official diagnosis: SUPER CUTE"],
-    ["Thinking", "Thinking some more", "Thinking even more", "Almost done", "Nevermind I need to think more", "Yeah no, there's no doubt that you're cute"],
-    ["Please be patient, scanning may take a while", "Nevermind, it's very obvious that you're cute"],
-    ["Scanning", "...", "...", "Sorry, I got distracted by how cute you were", "Test results: you are CUTE!"],
+    ["Thinking", "Thinking some more", "Thinking even more", "Almost done", "Nevermind I need to think more", "Yeah no, there's no doubt that " + inputText + " is cute"],
+    ["Please be patient, scanning may take a while", "Nevermind, it's very obvious that " + inputText + " is cute"],
+    ["Scanning", "...", "...", "Sorry, I got distracted by how cute you were", "Test results: " + inputText + " is CUTE!"],
     ["Loading...", "Connecting to server", "Scanning", "Cuteness overload detected", "Adjusting values to handle cuteness overload", "Final cuteness score: 592.6/10"],
-    ["Loading...", "Scanning profile", "Inputing algorithm", "Warning: Overflow Detected", "Error: Method outputCutenessLevel() takes an integer. The inputes var cutenessLevel is infinite."]
+    ["Loading...", "Scanning profile", "Inputing algorithm", "Warning: Overflow Detected", "Error: Method outputCutenessLevel() takes an integer. The input variable cutenessLevel is infinite."]
 ];
 
 function runCutenessTest() {
