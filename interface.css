@@ -5,7 +5,7 @@
 }
 body {
   margin: 0;
-  background-image: url("stripes.png");
+  background-image: url("/cutenessTester/stripes.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
