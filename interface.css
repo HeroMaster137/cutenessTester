@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-image: url("/stripes.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Stick the title at the very top */
+.title {
+  font-weight: bold;
+  font-size: 100px;
+  font-family: 'Brush Script MT', cursive;
+  margin-top: 20px;
+}
+
+/* Center the input/button in the remaining space */
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+button {
+  background-color: #d97093;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b65273;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.cute {
+  font-size: 40px;
+}
+
+.corner-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.corner-buttons button {
+  background-color: #d97093;
+  border: none;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 50%;
+  line-height: 1;
+}
+
+.corner-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+#loading-wrapper {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#loading-container {
+    width: 100%;
+    height: 20px;
+    background-color: #f8a6bf;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+}
+
+#loading-bar {
+    height: 100%;
+    background-color: #d6678c;
+    width: 0%;
+    border-radius: 15px;
+    transition: width 2s ease;
+}
+
+#spinner {
+    border: 15px solid transparent;
+    border-top: 15px solid #d97093;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#computeText {
+    font-size: 30px;
+    display: block;
+    max-width: none;
+    width: auto;
+    text-align: center;
+}
